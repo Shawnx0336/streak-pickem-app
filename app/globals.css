@@ -1,0 +1,52 @@
+@layer theme, base, frosted_ui, components, utilities;
+@import "tailwindcss/theme.css" layer(theme);
+@import "tailwindcss/preflight.css" layer(base);
+@import "tailwindcss/utilities.css" layer(utilities);
+@import "@whop/react/styles.css" layer(frosted_ui);
+@config '../tailwind.config.ts';
+
+body {
+	background: var(--background);
+	color: var(--foreground);
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Streak Pick'em Custom Styles */
+:root {
+  --bg-primary: #0a0a1a;
+  --bg-secondary: #1a1a2e;
+  --bg-tertiary: #16213e;
+  --text-primary: #ffffff;
+  --text-secondary: #a0a0b0;
+  --accent-win: #22c55e;
+  --accent-lose: #ef4444;
+  --accent-primary: #3b82f6;
+  --accent-blue: #3b82f6;
+  --accent-red: #ef4444;
+}
+
+.bg-bg-primary { 
+  background: linear-gradient(135deg, #0a0a1a 0%, #1a1a2e 100%);
+}
+.bg-bg-secondary { background-color: var(--bg-secondary); }
+.bg-bg-tertiary { background-color: var(--bg-tertiary); }
+.text-text-primary { color: var(--text-primary); }
+.text-text-secondary { color: var(--text-secondary); }
+.text-accent-win { color: var(--accent-win); }
+.text-accent-lose { color: var(--accent-lose); }
+.border-bg-tertiary { border-color: var(--bg-tertiary); }
+
+/* Game card styling */
+.rounded-xl {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.1);
+  border: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+/* Button styling */
+.bg-blue-600 {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+}
+
+.bg-red-600 {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+}
